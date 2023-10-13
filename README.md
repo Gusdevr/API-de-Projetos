@@ -2,6 +2,7 @@
 # Plataforma Gestilt
 
 Projeto de sistema para gerenciamento de tarefas e planejamento em react, com rotas, páginas e compoenentes, possibilidade de cadastro de usuário, autenticação e login, rota "painel" para criação dos projetos.
+Deploy: https://gerenciamento-de-projetos.vercel.app/
 
 
 
