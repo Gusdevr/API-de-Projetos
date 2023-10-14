@@ -6,6 +6,7 @@ import * as TarefaController from '../controllers/tarefa.controller';
 const router = Router()
 
 router.get('/projeto', ProjetoController.all)
+router.get('/projeto/:id', ProjetoController.findById)
 router.post('/projeto', ProjetoController.add)
 router.put('/projeto/:id', ProjetoController.update)
 router.delete('/projeto/:id', ProjetoController.remove)

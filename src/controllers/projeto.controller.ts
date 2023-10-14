@@ -12,6 +12,24 @@ export const all = async (req: Request, res: Response) => {
     }
 }
 
+export const findById = async (req: Request, res: Response) => {
+    const id: string = req.params.id;
+
+    try {
+        let projeto = await Projeto.findByPk(id);
+
+        if (projeto) {
+         
+            res.json({ item: projeto });
+        } else {
+            res.status(404).json({ erro: 'Projeto não encontrado' });
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ erro: 'Erro ao recuperar o projeto' });
+    }
+}
+
 export const add = async (req: Request, res: Response) => {
     try {
         const { nome, descricao, data_inicio } = req.body;
@@ -62,7 +80,7 @@ export const remove = async (req: Request, res: Response) => {
     if(projeto) {
      await projeto.destroy() 
      res.json(true)
-     
+
     } else {
         res.json(false)
     }
