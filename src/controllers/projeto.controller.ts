@@ -14,11 +14,11 @@ export const all = async (req: Request, res: Response) => {
 
 export const add = async (req: Request, res: Response) => {
     try {
-        const { nome, descricao, data } = req.body;
+        const { nome, descricao, data_inicio } = req.body;
         const novoProjeto = await Projeto.create({
             nome,
             descricao,
-            data,
+            data_inicio,
             done: req.body.done ? true : false
         });
         res.status(201).json(novoProjeto);
@@ -27,6 +27,7 @@ export const add = async (req: Request, res: Response) => {
         res.status(500).json({ message: 'Erro ao adicionar projeto.' });
     }
 }
+
 
 
 export const update = async (req: Request, res: Response) => {
@@ -41,7 +42,6 @@ export const update = async (req: Request, res: Response) => {
             }
 
             if (req.body.done !== undefined) {
-               
                 projeto.done = req.body.done === 'true' || req.body.done === '1';
             }
 
@@ -51,18 +51,20 @@ export const update = async (req: Request, res: Response) => {
             res.status(404).json({ erro: 'Projeto não encontrado' });
         }
     } catch (error) {
-     
         console.error(error);
         res.status(500).json({ erro: 'Erro ao atualizar o projeto' });
     }
 }
-
 
 export const remove = async (req: Request, res: Response) => {
     let id: string = req.params.id
     let projeto = await Projeto.findByPk(id)
     if(projeto) {
      await projeto.destroy() 
+     res.json(true)
+     
+    } else {
+        res.json(false)
     }
-    res.json({})
+   
  }

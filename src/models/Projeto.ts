@@ -27,7 +27,7 @@ export const Projeto = sequelize.define<ProjetoInstance>('Projeto', {
         type: DataTypes.TEXT,
         allowNull: true
     },
-    data: {
+    data_inicio: {
         type: DataTypes.DATE,
         allowNull: false
     }
