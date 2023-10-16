@@ -1,8 +1,23 @@
 
 # Plataforma Gestilt
 
-Projeto de sistema para gerenciamento de tarefas e planejamento em react, com rotas, páginas e compoenentes, possibilidade de cadastro de usuário, autenticação e login, rota "painel" para criação dos projetos.
-Deploy: https://gerenciamento-de-projetos.vercel.app/
+API desenvolvida para criação de projeto e tarefas associadas com titulo, id, descrição, data inicio, data final e campo conclusão.
+
+Api desenvolvida em Node.js com integração com banco de dados postgreSQL, foi ultilizado os frameworks sequelize, express e validator.
+
+Documentada e testada via postman, link da documentação:
+
+https://documenter.getpostman.com/view/28835807/2s9YR57vX7
+
+
+
+Instruções: 
+
+npm install
+
+npm run start-dev
+
+
 
 
 
@@ -21,4 +36,9 @@ Deploy: https://gerenciamento-de-projetos.vercel.app/
 
 
 
+
+
+## Autores
+
+- [@Gustavo](https://www.github.com/Gusdevr)
 
