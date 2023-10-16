@@ -1,9 +1,16 @@
-CRUD para frases
+CRUD para projetos
 
-OK - POST /frases - Criar frases novas
-OK - GET /frases - Listas todas as frases
-OK - GET /frases/123 - Pegar informações de uma frases
-OK - PUT /frase/123 - Atualizar informações de uma frase
-OK - DELETE /frase/123 - Deletar uma frase
+OK - POST /
+OK - GET /
+OK - GET /
+OK - PUT /
+OK - DELETE /
 
-GET /frase/aleatoria - pega uma frase aleatoriamente
+CRUD para tarefas
+
+
+OK - POST /
+OK - GET /
+OK - GET /
+OK - PUT /
+OK - DELETE /
